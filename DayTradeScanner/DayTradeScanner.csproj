@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DigitalRuby.ExchangeSharp" Version="0.4.1" />
+    <PackageReference Include="MessagePack" Version="1.7.3.4" />
+    <PackageReference Include="Avalonia" Version="0.6.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="EOSUSD-candles.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="DayTradeStrategy.cs" />
+    <Compile Remove="Backtest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bot\" />
+    <Folder Include="Backtest\" />
+    <Folder Include="Indicators\" />
+    <Folder Include="Bot\Interfaces\" />
+    <Folder Include="Bot\Implementation\" />
+  </ItemGroup>
+</Project>
